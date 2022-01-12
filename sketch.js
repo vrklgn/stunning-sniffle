@@ -24,7 +24,7 @@ function setup() {
   textFont('Helvetica Neue')
   textStyle(BOLD);
   fft = new p5.FFT();
-  peakDetect = new p5.PeakDetect();
+  peakDetect = new p5.PeakDetect(20,10000);
 
   }
 
@@ -55,7 +55,7 @@ function draw() {
   if ( peakDetect.isDetected ) {
     raintext *= 1.05;
   } else {
-    raintext = 100;
+    raintext *= 0.99;
   }
 
   textSize(raintext);
