@@ -1,32 +1,35 @@
 let rain = [];
 let drops = [];
-
 function setup() {
   createCanvas(1000, 1000);
-  // Starts in the middle
-  for (let i = 0; i < 50; i++) {
-    rain.push(new Rain());
-    gen = random(1,100)
-    if (gen > 80) {
-      drops.push(new Drops());
-    }
-    ring = 100
-    y = 0
-    //let randblopp = random(100)
-    //y = y + random(1,10);
-    //if (y > 1000) {
-      //y = 0;
-   // }
+  fade = 255
+  textFont('Helvetica Neue')
+  textStyle(BOLD);
+
   }
-}
 
 function draw() {
+  for (let rand = 0; rand < random(1,2); rand++){
+    rain.push(new Rain());
+    gen = random (1,100)
+    if (gen >= 94) {
+      drops.push(new Drops());
+    }
+  }
   //let randx = random(8000)
   var i = 0 
   background("rgba(2,4,38,1)");
+  fill("rgba(0,0,0,0.3)");
+  noStroke();
+  rect(0,800,1000,200);
+  textSize(50);
+  fill("rgba(255,255,255,1)");
+  text('BADCOMBINA', 500, 250);
+  text('IN THE RAIN', 500, 400)
+  textSize(30);
+  text('feat. vvillow', 500, 290);
   makeRain()
   makeDrops()
-  //waterdrop(random(1,1000));
   } 
 
 function makeRain() {
@@ -48,22 +51,29 @@ class Drops {
     this.x = random(0,width);
     this.y = random(5,10);
     this.z = random(10,50)
-    this.die = random(150,200)
+    this.die = random(900,950)
+    this.fade = random(0,80)
 }
 createDrop () {
-  stroke("rgba(255,255,255,0.1)");
-  strokeWeight(2);
-  fill("rgba(2,4,38,0.7)");
-  ellipse(this.x,900,this.z,this.y);
+  
+  strokeWeight(1);
+  fill(2,4,38,0);
+  stroke(255,255,255,this.fade);
+  ellipse(this.x,this.die,this.z,this.y);
 }
 
 stretchDrop () {
-  if(this.z < 200)
-    this.z = this.z+random(2,6)
-  if (this.z >= random(100,200))
-    this.z = 0
-}
+  if(this.z < 200){
+    this.fade += -1
+    this.z = this.z+random(0.5,5)
+  }
+  if (this.z >= random(150,200)){
+    let dindex = drops.indexOf(this);
+    drops.splice(dindex,1);
 
+    }
+
+  }
 }
 
 class Rain {
@@ -72,24 +82,22 @@ class Rain {
     this.y = random(0,100);
     this.z = random(100,200)
     this.die = random (0,100)
+    this.fade = random(10,130)
   }
   createParticle() {
     let ranleng = random(200)
     strokeWeight(1);
-    stroke("rgba(255,255,255,0.2)");
-    fill("rgba(255,255,255,0.2)");
+    stroke(color(255,255,255,10));
+    fill(color(255,255,255,this.fade));
     rect(this.x, this.y, 1, this.z)
   }
 
   moveParticle() {
-    if(this.y < 700)
+    if(this.y < 730)
     this.y+=random(0,100);
-  console.log (this.y)
-    if (this.y >= 700){
-      this.y=0
-      if (this.die >= 90){
-        //waterdrop(this.x)
-      }
+    if (this.y >= random(700,730)){
+      let index = rain.indexOf(this);
+      rain.splice(index,1);
       
     }
   }
