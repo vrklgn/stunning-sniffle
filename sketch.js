@@ -1,6 +1,6 @@
 let rain = [];
 let drops = [];
-let mysound;
+let mySound;
 
 function preload() {
   mySound = loadSound('assets/intherain.wav',play());
