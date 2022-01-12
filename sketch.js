@@ -1,7 +1,7 @@
 let rain = [];
 let drops = [];
 var cnv, soundFile, fft, peakDetect;
-var ellipseWidth = 10;
+var raintext = 70;
 
 
 function preload() {
