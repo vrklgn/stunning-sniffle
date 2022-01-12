@@ -53,9 +53,9 @@ function draw() {
   peakDetect.update(fft);
 
   if ( peakDetect.isDetected ) {
-    raintext *= 1.05;
+    raintext = 100;
   } else {
-    raintext *= 0.99;
+    raintext *= 90;
   }
 
   textSize(raintext);
