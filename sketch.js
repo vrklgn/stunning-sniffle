@@ -42,6 +42,7 @@ function draw() {
   fill("rgba(0,0,0,0.3)");
   noStroke();
   rect(0,820,width,380);
+  makeRain()
   textSize(50);
   fill("rgba(255,255,255,1)");
   text('BADCOMBINA', 50, 100);
@@ -53,17 +54,17 @@ function draw() {
   peakDetect.update(fft);
 
   if ( peakDetect.isDetected ) {
-    raintext = 115;
+    raintext = 130;
   } else {
     raintext = 100;
   }
-  fill("rgba(0,0,0,0.5)");
+  fill("rgba(0,0,0,0.7)");
   textSize(raintext);
   text('IN THE RAIN', 50, 250)
   fill("rgba(255,255,255,1)");
   textSize(100);
   text('IN THE RAIN', 50, 250)
-  makeRain()
+  
   makeDrops()
 }
 
