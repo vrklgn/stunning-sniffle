@@ -1,7 +1,7 @@
 let rain = [];
 let drops = [];
 var cnv, soundFile, fft, peakDetect;
-var raintext = 70;
+var raintext = 100;
 
 
 function preload() {
@@ -53,9 +53,9 @@ function draw() {
   peakDetect.update(fft);
 
   if ( peakDetect.isDetected ) {
-    raintext = 100;
+    raintext *= 1.05;
   } else {
-    raintext *= 60;
+    raintext *= 0.95;
   }
 
   textSize(raintext);
