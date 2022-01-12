@@ -3,10 +3,10 @@ let drops = [];
 let mySound;
 
 function preload() {
-  mySound = loadSound('assets/intherain.mp3',play());
+  mySound = loadSound('assets/intherain.mp3',musicplay());
 }
 
-function play() {
+function musicplay() {
   mySound.play();
 }
 
