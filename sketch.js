@@ -55,7 +55,7 @@ function draw() {
   if ( peakDetect.isDetected ) {
     raintext = 100;
   } else {
-    raintext *= 90;
+    raintext = 90;
   }
 
   textSize(raintext);
