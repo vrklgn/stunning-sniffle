@@ -1,27 +1,30 @@
 let rain = [];
 let drops = [];
-let mySound;
 var cnv, soundFile, fft, peakDetect;
+var ellipseWidth = 10;
 
 
 function preload() {
-  mySound = loadSound('assets/intherain.mp3');
+  soundFile = loadSound('assets/intherain.mp3');
 }
 
-function canvasPressed() {
-  mySound.play();
+function mouseClicked() {
+  if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+    if (soundFile.isPlaying() ) {
+      soundFile.stop();
+    } else {
+      soundFile.play();
+    }
+  }
 }
 
 function setup() {
   let canvas = createCanvas(1920, 1080);
-  canvas.mousePressed(canvasPressed)
   fade = 255
   textFont('Helvetica Neue')
   textStyle(BOLD);
   fft = new p5.FFT();
   peakDetect = new p5.PeakDetect();
-
-  
 
   }
 
@@ -46,8 +49,7 @@ function draw() {
   text('FEAT. VVILLOW', 50, 140);
   textSize(90);
   text('IN THE RAIN', 50, 250)
-  makeRain()
-  makeDrops()
+
   fft.analyze();
   peakDetect.update(fft);
 
@@ -58,6 +60,8 @@ function draw() {
   }
 
   ellipse(width/2, height/2, ellipseWidth, ellipseWidth);
+  makeRain()
+  makeDrops()
 }
 
 function makeRain() {
