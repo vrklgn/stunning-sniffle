@@ -1,6 +1,8 @@
 let rain = [];
 let drops = [];
 let mySound;
+var cnv, soundFile, fft, peakDetect;
+
 
 function preload() {
   mySound = loadSound('assets/intherain.mp3');
@@ -16,6 +18,9 @@ function setup() {
   fade = 255
   textFont('Helvetica Neue')
   textStyle(BOLD);
+  fft = new p5.FFT();
+  peakDetect = new p5.PeakDetect();
+
   
 
   }
@@ -43,7 +48,17 @@ function draw() {
   text('IN THE RAIN', 50, 250)
   makeRain()
   makeDrops()
-  } 
+  fft.analyze();
+  peakDetect.update(fft);
+
+  if ( peakDetect.isDetected ) {
+    ellipseWidth = 50;
+  } else {
+    ellipseWidth *= 0.95;
+  }
+
+  ellipse(width/2, height/2, ellipseWidth, ellipseWidth);
+}
 
 function makeRain() {
     for(var i = 0; i<rain.length;i++){
