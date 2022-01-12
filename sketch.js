@@ -57,12 +57,11 @@ function draw() {
   } else {
     raintext = 100;
   }
+  fill("rgba(0,0,0,0.5)");
+  textSize(raintext);
+  text('IN THE RAIN', 50, 250)
   fill("rgba(255,255,255,1)");
   textSize(100);
-  text('IN THE RAIN', 50, 250)
-
-  fill("rgba(0,0,0,0.3)");
-  textSize(raintext);
   text('IN THE RAIN', 50, 250)
   makeRain()
   makeDrops()
