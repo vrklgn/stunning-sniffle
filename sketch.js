@@ -3,7 +3,7 @@ let drops = [];
 let mySound;
 
 function preload() {
-  mySound = loadSound('assets/intherain.wav',play());
+  mySound = loadSound('assets/intherain.mp3',play());
 }
 
 function play() {
