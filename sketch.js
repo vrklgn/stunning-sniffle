@@ -1,7 +1,7 @@
 let rain = [];
 let drops = [];
 function setup() {
-  createCanvas(1000, 1000);
+  createCanvas(1920, 1080);
   fade = 255
   textFont('Helvetica Neue')
   textStyle(BOLD);
@@ -18,16 +18,17 @@ function draw() {
   }
   //let randx = random(8000)
   var i = 0 
-  background("rgba(2,4,38,1)");
+  background("rgba(20,23,38,1)");
   fill("rgba(0,0,0,0.3)");
   noStroke();
-  rect(0,800,1000,200);
+  rect(0,820,width,380);
   textSize(50);
   fill("rgba(255,255,255,1)");
-  text('BADCOMBINA', 500, 250);
-  text('IN THE RAIN', 500, 400)
-  textSize(30);
-  text('feat. vvillow', 500, 290);
+  text('BADCOMBINA', 50, 100);
+  textSize(28);
+  text('FEAT. VVILLOW', 50, 140);
+  textSize(90);
+  text('IN THE RAIN', 50, 250)
   makeRain()
   makeDrops()
   } 
