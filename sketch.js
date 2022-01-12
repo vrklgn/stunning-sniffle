@@ -47,19 +47,19 @@ function draw() {
   text('BADCOMBINA', 50, 100);
   textSize(28);
   text('FEAT. VVILLOW', 50, 140);
-  textSize(90);
-  text('IN THE RAIN', 50, 250)
+
 
   fft.analyze();
   peakDetect.update(fft);
 
   if ( peakDetect.isDetected ) {
-    ellipseWidth = 50;
+    raintext = 100;
   } else {
-    ellipseWidth *= 0.95;
+    raintext *= 60;
   }
 
-  ellipse(width/2, height/2, ellipseWidth, ellipseWidth);
+  textSize(raintext);
+  text('IN THE RAIN', 50, 250)
   makeRain()
   makeDrops()
 }
