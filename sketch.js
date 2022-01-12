@@ -3,15 +3,16 @@ let drops = [];
 let mySound;
 
 function preload() {
-  mySound = loadSound('assets/intherain.mp3',musicplay());
+  mySound = loadSound('assets/intherain.mp3');
 }
 
-function musicplay() {
+function canvasPressed() {
   mySound.play();
 }
 
 function setup() {
-  createCanvas(1920, 1080);
+  let canvas = createCanvas(1920, 1080);
+  canvas.mousePressed(canvasPressed)
   fade = 255
   textFont('Helvetica Neue')
   textStyle(BOLD);
