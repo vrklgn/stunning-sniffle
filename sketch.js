@@ -3,7 +3,11 @@ let drops = [];
 let mysound;
 
 function preload() {
-  mysound = loadSound('assets/intherain.wav');
+  mySound = loadSound('assets/intherain.wav',play());
+}
+
+function play() {
+  mySound.play();
 }
 
 function setup() {
@@ -11,7 +15,7 @@ function setup() {
   fade = 255
   textFont('Helvetica Neue')
   textStyle(BOLD);
-  mySound.play();
+  
 
   }
 
