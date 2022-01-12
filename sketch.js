@@ -53,9 +53,9 @@ function draw() {
   peakDetect.update(fft);
 
   if ( peakDetect.isDetected ) {
-    raintext = 120;
+    raintext *= 1.10;
   } else {
-    raintext = 100;
+    raintext *= 0.99;
   }
   fill("rgba(255,255,255,1)");
   textSize(100);
