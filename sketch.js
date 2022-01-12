@@ -53,7 +53,7 @@ function draw() {
   peakDetect.update(fft);
 
   if ( peakDetect.isDetected ) {
-    raintext *= 1.05;
+    raintext = 115;
   } else {
     raintext = 100;
   }
@@ -61,7 +61,7 @@ function draw() {
   textSize(100);
   text('IN THE RAIN', 50, 250)
 
-  fill("rgba(255,255,255,0.5)");
+  fill("rgba(0,0,0,0.3)");
   textSize(raintext);
   text('IN THE RAIN', 50, 250)
   makeRain()
