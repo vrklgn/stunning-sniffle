@@ -1,10 +1,17 @@
 let rain = [];
 let drops = [];
+let mysound;
+
+function preload() {
+  mysound = loadSound('assets/intherain.wav');
+}
+
 function setup() {
   createCanvas(1920, 1080);
   fade = 255
   textFont('Helvetica Neue')
   textStyle(BOLD);
+  mySound.play();
 
   }
 
