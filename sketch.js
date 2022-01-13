@@ -145,7 +145,7 @@ class Rain {
 
   moveParticle() {
     if(this.y < height*0.80)
-    this.y+=random(0,70);
+    this.y+=random(0,40);
     if (this.y >= random(height*0.70,height*0.80)){
       let index = rain.indexOf(this);
       rain.splice(index,1);
