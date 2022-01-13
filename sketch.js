@@ -67,9 +67,9 @@ function draw() {
     raintext *= 0.85;
   }
   textSize(height*0.04);
+  textWrap(WORD);
   //was 50
   fill("rgba(255,255,255,1)");
-  textWrap(WORD);
   text('BADCOMBINA FEAT. VVILLOW', 50, height*0.09, width*0.4, height);
   //textSize(height*0.025);
   //was 28
