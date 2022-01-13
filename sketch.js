@@ -20,10 +20,11 @@ function mouseClicked() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+  console.log("RESIZED")
 }
 
 function setup() {
-  let canvas = createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight);
   fade = 255
   lowh = height*0.3
   highh = height*0.6
