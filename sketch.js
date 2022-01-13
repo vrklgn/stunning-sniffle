@@ -30,7 +30,6 @@ function setup() {
   fade = 255
   lowh = height*0.3
   highh = height-lowh
-  console.log (lowh)
   textFont('Helvetica Neue')
   textStyle(BOLD);
   fft = new p5.FFT();
@@ -39,8 +38,7 @@ function setup() {
   }
 
 function draw() {
-  console.log ("Height:"+height)
-  console.log ("Width:"+width)
+
   lowh = height*0.3
   highh = height-lowh
   background("rgba(20,23,40,1)");
@@ -101,7 +99,7 @@ class Drops {
     this.x = random(0,width);
     this.y = random(5,10);
     this.z = random(10,50)
-    this.die = random(900,950)
+    this.die = random(highh,height)
     this.fade = random(0,80)
 }
 createDrop () {
