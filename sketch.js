@@ -29,7 +29,7 @@ function setup() {
 
   fade = 255
   lowh = height*0.3
-  highh = height*0.6
+  highh = height-lowh
   console.log (lowh)
   textFont('Helvetica Neue')
   textStyle(BOLD);
