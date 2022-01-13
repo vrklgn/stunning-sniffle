@@ -26,6 +26,7 @@ function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   fade = 255
   lowh = height*0.3
+  highh = height*0.6
   console.log (lowh)
   textFont('Helvetica Neue')
   textStyle(BOLD);
@@ -47,7 +48,7 @@ function draw() {
   var i = 0 
   fill("rgba(0,0,0,0.3)");
   noStroke();
-  rect(0,820,width,lowh);
+  rect(0,highh,width,lowh);
   makeRain()
   fill(0,0,0,raintext)
   textSize(261);
