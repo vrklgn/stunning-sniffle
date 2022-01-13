@@ -51,7 +51,7 @@ function draw() {
   if ( peakDetect.isDetected ) {
     raintext = 255;
   } else {
-    raintext =* 0.90;
+    raintext *= 0.90;
   }
   textSize(50);
   fill("rgba(255,255,255,1)");
