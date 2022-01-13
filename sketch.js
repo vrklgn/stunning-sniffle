@@ -66,13 +66,16 @@ function draw() {
   } else {
     raintext *= 0.85;
   }
-  textSize(50);
+  textSize(height*0.04);
+  //was 50
   fill("rgba(255,255,255,1)");
   text('BADCOMBINA', 50, 100);
-  textSize(28);
+  textSize(height*0.025);
+  //was 28
   text('FEAT. VVILLOW', 50, 140);
   fill("rgba(255,255,255,1)");
-  textSize(100);
+  textSize(height*0.1);
+  //was 100
   text('IN THE RAIN', 50, 250)
   
   makeDrops()
