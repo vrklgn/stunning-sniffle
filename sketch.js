@@ -54,8 +54,6 @@ function draw() {
   fill("rgba(0,0,0,0.3)");
   noStroke();
   rect(0,highh,width,lowh);
-  console.log("PosH")
-  console.log(highh)
   makeRain()
   fill(0,0,0,raintext)
   textSize(261);
