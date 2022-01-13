@@ -1,7 +1,7 @@
 let rain = [];
 let drops = [];
 var cnv, soundFile, fft, peakDetect;
-var raintext = 100;
+var raintext = 0;
 
 
 function preload() {
@@ -54,12 +54,12 @@ function draw() {
   peakDetect.update(fft);
 
   if ( peakDetect.isDetected ) {
-    raintext = 130;
+    raintext = 1.0;
   } else {
-    raintext = 100;
+    raintext *= 0.95;
   }
-  fill("rgba(0,0,0,0.8)");
-  textSize(raintext);
+  fill(color(0,0,0,raintext));
+  textSize(160);
   text('IN THE RAIN', 50, 250)
   fill("rgba(255,255,255,1)");
   textSize(100);
