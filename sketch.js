@@ -26,6 +26,7 @@ function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   fade = 255
   lowh = height*0.3
+  console.log (lowh)
   textFont('Helvetica Neue')
   textStyle(BOLD);
   fft = new p5.FFT();
