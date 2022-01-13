@@ -71,9 +71,9 @@ function draw() {
   fill("rgba(255,255,255,1)");
   textWrap(WORD);
   text('BADCOMBINA FEAT. VVILLOW', 50, height*0.09, width*0.4, height);
-  textSize(height*0.025);
+  //textSize(height*0.025);
   //was 28
-  text('FEAT. VVILLOW', 50, height*0.13);
+  //text('FEAT. VVILLOW', 50, height*0.13);
   fill("rgba(255,255,255,1)");
   textSize(height*0.1);
   //was 100
