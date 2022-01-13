@@ -131,7 +131,7 @@ class Rain {
   constructor(){
     this.x = random(0,width);
     this.y = random(0,100);
-    this.z = random(100,200)
+    this.z = random(50,200)
     this.die = random (0,100)
     this.fade = random(10,130)
   }
