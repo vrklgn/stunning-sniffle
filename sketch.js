@@ -43,11 +43,6 @@ function draw() {
   noStroke();
   rect(0,820,width,380);
   makeRain()
-  textSize(50);
-  fill("rgba(255,255,255,1)");
-  text('BADCOMBINA', 50, 100);
-  textSize(28);
-  text('FEAT. VVILLOW', 50, 140);
   fill(0,0,0,raintext)
   textSize(160);
   text('IN THE RAIN', 50, 250)
@@ -56,9 +51,13 @@ function draw() {
   if ( peakDetect.isDetected ) {
     raintext = 255;
   } else {
-    raintext--;
+    raintext =* 0.90;
   }
-  
+  textSize(50);
+  fill("rgba(255,255,255,1)");
+  text('BADCOMBINA', 50, 100);
+  textSize(28);
+  text('FEAT. VVILLOW', 50, 140);
   fill("rgba(255,255,255,1)");
   textSize(100);
   text('IN THE RAIN', 50, 250)
