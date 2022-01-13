@@ -44,15 +44,15 @@ function draw() {
   rect(0,820,width,380);
   makeRain()
   fill(0,0,0,raintext)
-  textSize(260);
+  textSize(261);
   noStroke();
   text('IN THE RAIN', 50, 250)
   fft.analyze();
   peakDetect.update(fft);
   if ( peakDetect.isDetected ) {
-    raintext = 255;
+    raintext = 200;
   } else {
-    raintext *= 0.90;
+    raintext *= 0.88;
   }
   textSize(50);
   fill("rgba(255,255,255,1)");
