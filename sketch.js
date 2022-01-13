@@ -71,10 +71,10 @@ function draw() {
   textWrap(WORD);
   //was 50
   fill("rgba(255,255,255,1)");
-  text('BADCOMBINA', 50, height*0.09, width*0.5, height);
+  text('BADCOMBINA', 50, height*0.10, width*0.5, height);
   textSize(height*0.025);
   //was 28
-  text('FEAT. VVILLOW', 50, height*0.12);
+  text('FEAT. VVILLOW', 50, height*0.15);
   fill("rgba(255,255,255,1)");
   textSize(height*0.1);
   //was 100
