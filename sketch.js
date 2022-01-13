@@ -44,7 +44,8 @@ function draw() {
   rect(0,820,width,380);
   makeRain()
   fill(0,0,0,raintext)
-  textSize(160);
+  textSize(250);
+  noStroke();
   text('IN THE RAIN', 50, 250)
   fft.analyze();
   peakDetect.update(fft);
