@@ -1,7 +1,7 @@
 let rain = [];
 let drops = [];
 var cnv, soundFile, fft, peakDetect;
-var raintext = 0;
+var raintext = 255;
 
 
 function preload() {
@@ -48,21 +48,17 @@ function draw() {
   text('BADCOMBINA', 50, 100);
   textSize(28);
   text('FEAT. VVILLOW', 50, 140);
-
-
-  fft.analyze();
-  peakDetect.update(fft);
-
-  if ( peakDetect.isDetected ) {
-    raintext = 1.0;
-    fill(color(0,0,0,raintext));
-  } else {
-    raintext *= 0.95;
-    fill(color(0,0,0,raintext));
-  }
-  
+  fill(0,0,0,raintext)
   textSize(160);
   text('IN THE RAIN', 50, 250)
+  fft.analyze();
+  peakDetect.update(fft);
+  if ( peakDetect.isDetected ) {
+    raintext = 255;
+  } else {
+    raintext--;
+  }
+  
   fill("rgba(255,255,255,1)");
   textSize(100);
   text('IN THE RAIN', 50, 250)
