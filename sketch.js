@@ -55,10 +55,12 @@ function draw() {
 
   if ( peakDetect.isDetected ) {
     raintext = 1.0;
+    fill(color(0,0,0,raintext));
   } else {
     raintext *= 0.95;
+    fill(color(0,0,0,raintext));
   }
-  fill(color(0,0,0,raintext));
+  
   textSize(160);
   text('IN THE RAIN', 50, 250)
   fill("rgba(255,255,255,1)");
