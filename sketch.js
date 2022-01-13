@@ -24,7 +24,7 @@ function setup() {
   textFont('Helvetica Neue')
   textStyle(BOLD);
   fft = new p5.FFT();
-  peakDetect = new p5.PeakDetect(20,4000,0.4,60);
+  peakDetect = new p5.PeakDetect(28,38,0.4,60);
 
   }
 
