@@ -58,7 +58,7 @@ function draw() {
   fill(0,0,0,raintext)
   textSize(height*0.25);
   noStroke();
-  text('IN THE RAIN', 50, height*0.23)
+  text('IN THE RAIN', 50, height*0.25)
   fft.analyze();
   peakDetect.update(fft);
   if ( peakDetect.isDetected ) {
@@ -70,14 +70,14 @@ function draw() {
   textWrap(WORD);
   //was 50
   fill("rgba(255,255,255,1)");
-  text('BADCOMBINA FEAT. VVILLOW', 50, height*0.09, width*0.4, height);
-  //textSize(height*0.025);
+  text('BADCOMBINA', 50, height*0.09, width*0.5, height);
+  textSize(height*0.025);
   //was 28
-  //text('FEAT. VVILLOW', 50, height*0.13);
+  text('FEAT. VVILLOW', 50, height*0.13);
   fill("rgba(255,255,255,1)");
   textSize(height*0.1);
   //was 100
-  text('IN THE RAIN', 50, height*0.23)
+  text('IN THE RAIN', 50, height*0.25)
   
   makeDrops()
 }
