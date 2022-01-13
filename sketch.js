@@ -25,6 +25,7 @@ function windowResized() {
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   fade = 255
+  lowh = height*0.3
   textFont('Helvetica Neue')
   textStyle(BOLD);
   fft = new p5.FFT();
@@ -45,7 +46,7 @@ function draw() {
   var i = 0 
   fill("rgba(0,0,0,0.3)");
   noStroke();
-  rect(0,820,width,380);
+  rect(0,820,width,lowh);
   makeRain()
   fill(0,0,0,raintext)
   textSize(261);
