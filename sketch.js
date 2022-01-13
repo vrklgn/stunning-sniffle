@@ -39,8 +39,8 @@ function setup() {
   }
 
 function draw() {
-  console.log ("Height:" height)
-  console.log ("Width:" width)
+  console.log ("Height:"+height)
+  console.log ("Width:"+width)
   lowh = height*0.3
   highh = height*0.6
   background("rgba(20,23,40,1)");
