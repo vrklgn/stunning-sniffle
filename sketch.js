@@ -21,10 +21,12 @@ function mouseClicked() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   console.log("RESIZED")
+
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+
   fade = 255
   lowh = height*0.3
   highh = height*0.6
@@ -37,6 +39,10 @@ function setup() {
   }
 
 function draw() {
+  console.log ("Height:" height)
+  console.log ("Width:" width)
+  lowh = height*0.3
+  highh = height*0.6
   background("rgba(20,23,40,1)");
   for (let rand = 0; rand < random(1,2); rand++){
     rain.push(new Rain());
