@@ -18,8 +18,12 @@ function mouseClicked() {
   }
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function setup() {
-  let canvas = createCanvas(1920, 1080);
+  let canvas = createCanvas(windowWidth, windowHeight);
   fade = 255
   textFont('Helvetica Neue')
   textStyle(BOLD);
@@ -29,6 +33,7 @@ function setup() {
   }
 
 function draw() {
+  background("rgba(20,23,40,1)");
   for (let rand = 0; rand < random(1,2); rand++){
     rain.push(new Rain());
     gen = random (1,100)
@@ -38,7 +43,6 @@ function draw() {
   }
   //let randx = random(8000)
   var i = 0 
-  background("rgba(20,23,38,1)");
   fill("rgba(0,0,0,0.3)");
   noStroke();
   rect(0,820,width,380);
