@@ -97,7 +97,7 @@ class Drops {
     this.x = random(0,width);
     this.y = random(5,10);
     this.z = random(10,50)
-    this.die = random(highh,height)
+    this.die = random(highh*0.95,height)
     this.fade = random(0,80)
 }
 createDrop () {
